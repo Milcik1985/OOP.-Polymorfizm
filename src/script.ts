@@ -42,7 +42,7 @@ newCar.lock()
 newCar.isParked()
 newCar.park()
 newCar.leaveParking()
-// newCar.displayParkingStatus()
+newCar.displayParkingStatus()
 
 
 

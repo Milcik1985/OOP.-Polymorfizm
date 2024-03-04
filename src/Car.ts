@@ -1,4 +1,5 @@
 // 5. Sukurti interface IDrivable, kuris turi turėt metodą drive()
+
 export interface IDrivable {
     drive(): void};
 
@@ -36,8 +37,8 @@ export class Car implements IDrivable, IRefuelable {
 
 // 12. Car pridėt metodą displayParkingStatus. Metodas turi į console išvesti skirtingas žinutes.
 
-// displayParkingStatus() {
-//     const parkingStatus = this.isParked ? "Car is at parking now" : "Car is not in parking";
-//     console.log(parkingStatus);
-// }
+ displayParkingStatus() {
+     const parkingStatus = this.isParked ? "Car is at parking now" : "Car is not in parking";
+     console.log(parkingStatus);
+ }
 };
