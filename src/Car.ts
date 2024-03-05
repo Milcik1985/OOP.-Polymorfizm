@@ -10,6 +10,7 @@ export interface IRefuelable {
 export class Car implements IDrivable, IRefuelable {
 isParked: boolean;
 
+// 9. Car turi turėt papildomą savybę "isParked";
 constructor (
     isParked: boolean,
 ) {
@@ -27,9 +28,6 @@ constructor (
     lock() {
         console.log("Car is locked");
     }
-
-// 9. Car turi turėt papildomą savybę "isParked";
-
 
 // 10. Car turi turėt papildomą metodą park(), kai jis yra iškviečiamas "isParked" turi tapt true;  
     park() {
