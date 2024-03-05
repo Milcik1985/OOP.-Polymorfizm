@@ -26,11 +26,10 @@ newBycicle.lock();
 // 10. Car turi turėt papildomą metodą park(), kai jis yra iškviečiamas "isParked" turi tapt true;  
 // 11. Car turi turėt papildomą metodą leaveParking(), kai jis yra iškviečiamas "isParked" turi tapt false;
 // 12. Car pridėt metodą displayParkingStatus. Metodas turi į console išvesti skirtingas žinutes.
-const newCar = new Car();
+const newCar = new Car(true);
 newCar.drive();
 newCar.refuel(5);
 newCar.lock();
-newCar.isParked();
 newCar.park();
 newCar.leaveParking();
-// newCar.displayParkingStatus()
+newCar.displayParkingStatus();

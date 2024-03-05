@@ -8,6 +8,14 @@ export interface IRefuelable {
     refuel(amount: number): void};
 
 export class Car implements IDrivable, IRefuelable {
+isParked: boolean;
+
+constructor (
+    isParked: boolean,
+) {
+    this.isParked = isParked;
+}
+
     drive() {
         console.log("Car is driving");
     };
@@ -21,18 +29,16 @@ export class Car implements IDrivable, IRefuelable {
     }
 
 // 9. Car turi turėt papildomą savybę "isParked";
-    isParked() {
-        console.log("Car is parked");
-    }
+
 
 // 10. Car turi turėt papildomą metodą park(), kai jis yra iškviečiamas "isParked" turi tapt true;  
-    park(isParked = true) {
-        console.log("Car is at the parking now")
+    park() {
+     this.isParked = true;
     };
 
 // 11. Car turi turėt papildomą metodą leaveParking(), kai jis yra iškviečiamas "isParked" turi tapt false;
-    leaveParking(isParked  = false) {
-        console.log("Car is leaving parking")}
+    leaveParking() {
+        this.isParked = false;}
        
 
 // 12. Car pridėt metodą displayParkingStatus. Metodas turi į console išvesti skirtingas žinutes.

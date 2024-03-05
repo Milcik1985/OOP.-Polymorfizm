@@ -1,6 +1,10 @@
+// 5. Sukurti interface IDrivable, kuris turi turėt metodą drive()
 ;
 ;
 export class Car {
+    constructor(isParked) {
+        this.isParked = isParked;
+    }
     drive() {
         console.log("Car is driving");
     }
@@ -13,17 +17,19 @@ export class Car {
         console.log("Car is locked");
     }
     // 9. Car turi turėt papildomą savybę "isParked";
-    isParked() {
-        console.log("Car is parked");
-    }
     // 10. Car turi turėt papildomą metodą park(), kai jis yra iškviečiamas "isParked" turi tapt true;  
-    park(isParked = true) {
-        console.log("Car is at the parking now");
+    park() {
+        this.isParked = true;
     }
     ;
     // 11. Car turi turėt papildomą metodą leaveParking(), kai jis yra iškviečiamas "isParked" turi tapt false;
-    leaveParking(isParked = false) {
-        console.log("Car is leaving parking");
+    leaveParking() {
+        this.isParked = false;
+    }
+    // 12. Car pridėt metodą displayParkingStatus. Metodas turi į console išvesti skirtingas žinutes.
+    displayParkingStatus() {
+        const parkingStatus = this.isParked ? "Car is at parking now" : "Car is not in parking";
+        console.log(parkingStatus);
     }
 }
 ;

@@ -1,4 +1,3 @@
-// 7. Sukurti Bicycle klasę, kuri turi implementuoją IDrivable interface, bei turi papildomą metodą lock();
 ;
 export class Bicycle {
     drive() {
